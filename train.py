@@ -70,7 +70,7 @@ def train_maddpg(env, max_episode=1000, max_t=1000, print_every=5, check_history
             print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.4f}'.format(episode - check_history, np.mean(scores_deque)))
             for agent in maddpg.ddpg_agents:
                 torch.save(agent.actor_local.state_dict(), 'actor_agent_'+str(agent.id)+'.pth')
-                torch.save(agent.actor_local.state_dict(), 'critic_agent_'+str(agent.id)+'.pth')
+                torch.save(agent.critic_local.state_dict(), 'critic_agent_'+str(agent.id)+'.pth')
             break
         
      
