@@ -10,7 +10,7 @@ def hidden_init(layer):
     return (-lim, lim)
 
 class Actor(nn.Module):
-    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=128):
+    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=256):
         super(Actor, self).__init__()
 
         """self.input_norm = nn.BatchNorm1d(input_dim)
@@ -39,7 +39,7 @@ class Actor(nn.Module):
         
 
 class Critic(nn.Module):
-    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=128):
+    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=256):
         super(Critic, self).__init__()
 
         """self.input_norm = nn.BatchNorm1d(input_dim)
