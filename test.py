@@ -56,7 +56,7 @@ def test_ddpg(env, episodes=10):
              
 if __name__ == '__main__':
     env = UnityEnvironment(file_name='Tennis_Linux/Tennis.x86_64')
-    scores = test_ddpg(env, episodes=50)
+    scores = test_ddpg(env, episodes=100)
     env.close()
     
     fig = plt.figure()
